@@ -1,0 +1,78 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: rgb(161, 38, 38);
+  display: flex;
+}
+
+.Headline-Div {
+  height: 800px;
+  width: 400px;
+  background-color: aqua;
+  padding: 20px;
+  margin: 50px;
+  border: solid 3px;
+  overflow: visible;
+  scale: 1;
+  border-radius: 16px;
+  padding: 20px;
+  margin: 10px;
+  /* Animation */
+  animation-name: spin;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 3s;
+  animation-iteration-count: 5;
+  animation-direction: alternate;
+  animation-fill-mode: none;
+  animation-play-state: running;
+  display: flex;
+  /* Zentrierung */
+
+  flex-direction: column;
+
+  /* Hintergrund-Bild */
+  background-image: url("../../assets/images/swiftbackground.jpg");
+  background-size: cover; /* komplett ausfüllen */
+  background-position: center; /* zentrieren */
+  background-repeat: no-repeat;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0) scale(1);
+    border-radius: 0;
+
+    border-radius: 25%;
+  }
+  50% {
+    border-radius: 0;
+  }
+  100% {
+    transform: rotate(360deg) scale(2);
+    border-radius: 25%;
+  }
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* oder cover, je nach gewünschtem Verhalten */
+}
+
+.Backgroundjpg {
+  max-height: 100%; /* max Höhe = Höhe des Divs */
+  max-width: 100%; /* max Breite = Breite des Divs */
+  object-fit: contain; /* Bild proportional skalieren */
+}
+
+.Headline {
+  transition: transform 0.2s ease-in-out;
+}
+
+.Headline:hover {
+  transform: scale(1.5);
+}
